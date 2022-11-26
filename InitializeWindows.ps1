@@ -14,4 +14,5 @@ Write-Host "Selected profile:" $profiles[$selectedIndex] -ForegroundColor Green
 $appJsonPath = Join-Path -Path $profiles[$selectedIndex] "apps.json"
 
 winget source update
+winget upgrade --all
 winget import -i $appJsonPath --accept-package-agreements --accept-source-agreements
