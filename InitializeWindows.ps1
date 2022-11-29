@@ -1,3 +1,5 @@
+#Requires -RunAsAdministrator
+
 $profiles = Get-ChildItem .\Profiles\
 
 Write-Host
