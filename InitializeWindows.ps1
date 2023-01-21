@@ -23,6 +23,7 @@ Get-AppxPackage Microsoft.MicrosoftSolitaireCollection* | Remove-AppxPackage
 Get-AppxPackage Microsoft.MicrosoftStickyNotes* | Remove-AppxPackage
 Get-AppxPackage Microsoft.WindowsFeedbackHub* | Remove-AppxPackage
 Get-AppxPackage Microsoft.YourPhone* | Remove-AppxPackage
+Get-AppxPackage MicrosoftTeams* | Remove-AppxPackage
 
 $appJsonPath = Join-Path -Path $profiles[$selectedIndex] "apps.json"
 
