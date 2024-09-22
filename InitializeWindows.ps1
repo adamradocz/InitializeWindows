@@ -15,4 +15,4 @@ winget source update
 winget upgrade --all
 winget import -i $appJsonPath --accept-package-agreements --accept-source-agreements
 
-winget install Ghisler.TotalCommander Google.Chrome Microsoft.PowerShell UCBerkeley.BOINC VideoLAN.VLC WireGuard.WireGuard
+winget install Ghisler.TotalCommander Google.Chrome Microsoft.PowerShell UCBerkeley.BOINC VideoLAN.VLC WireGuard.WireGuard XnSoft.XnViewMP
