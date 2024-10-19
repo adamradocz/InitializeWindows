@@ -13,4 +13,4 @@ Get-AppxPackage MicrosoftTeams* | Remove-AppxPackage
 
 winget source update
 winget upgrade --all
-winget install Ghisler.TotalCommander Google.Chrome Microsoft.PowerShell UCBerkeley.BOINC VideoLAN.VLC WireGuard.WireGuard XnSoft.XnViewMP
+winget install Ghisler.TotalCommander Google.Chrome Gyan.FFmpeg Microsoft.PowerShell UCBerkeley.BOINC VideoLAN.VLC WireGuard.WireGuard XnSoft.XnViewMP
