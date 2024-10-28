@@ -34,4 +34,12 @@ winget uninstall --name "Microsoft Teams" --exact
 
 winget source update
 winget upgrade --all
-winget install Ghisler.TotalCommander Google.Chrome Gyan.FFmpeg Microsoft.PowerShell UCBerkeley.BOINC VideoLAN.VLC WireGuard.WireGuard XnSoft.XnViewMP
+winget install --exact --id TorProject.TorBrowser
+winget install -e -id Ghisler.TotalCommander
+winget install -e -id Google.Chrome
+winget install -e -id Gyan.FFmpeg
+winget install -e -id Microsoft.PowerShell
+winget install -e -id UCBerkeley.BOINC
+winget install -e -id VideoLAN.VLC
+winget install -e -id WireGuard.WireGuard
+winget install -e -id XnSoft.XnViewMP
