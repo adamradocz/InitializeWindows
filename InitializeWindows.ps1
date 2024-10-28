@@ -40,7 +40,7 @@ winget install --exact --id Google.Chrome
 winget install --exact --id Gyan.FFmpeg
 winget install --exact --id Logitech.OptionsPlus 
 winget install --exact --id Microsoft.PowerShell
-winget install --exact --id TorProject.TorBrowser
+winget install --exact --location $Env:LOCALAPPDATA\Microsoft\WinGet\Packages\TorProject.TorBrowser --id TorProject.TorBrowser
 winget install --exact --id UCBerkeley.BOINC
 winget install --exact --id VideoLAN.VLC
 winget install --exact --id WireGuard.WireGuard
