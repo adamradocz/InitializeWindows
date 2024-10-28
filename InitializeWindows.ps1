@@ -38,6 +38,7 @@ winget upgrade --all
 winget install --exact --id Ghisler.TotalCommander
 winget install --exact --id Google.Chrome
 winget install --exact --id Gyan.FFmpeg
+winget install --exact --id Logitech.OptionsPlus 
 winget install --exact --id Microsoft.PowerShell
 winget install --exact --id TorProject.TorBrowser
 winget install --exact --id UCBerkeley.BOINC
