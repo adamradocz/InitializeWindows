@@ -1,6 +1,6 @@
 #Requires -RunAsAdministrator
 
-#Infos: https://github.com/SimonCropp/WinDebloat
+#Info: https://github.com/SimonCropp/WinDebloat
 winget uninstall --name "Windows Camera" --exact
 winget uninstall --name "Clipchamp" --exact
 winget uninstall --name "Feedback Hub" --exact
