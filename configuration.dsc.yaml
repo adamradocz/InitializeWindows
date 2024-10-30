@@ -97,14 +97,6 @@ properties:
         id: Gyan.FFmpeg
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: Logitech.OptionsPlus
-      directives:
-        description: Install Logitech.OptionsPlus
-        allowPrerelease: true
-      settings:
-        id: Logitech.OptionsPlus
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: Microsoft.PowerShell
       directives:
         description: Install Microsoft.PowerShell
@@ -151,4 +143,29 @@ properties:
         allowPrerelease: true
       settings:
         id: XnSoft.XnViewMP
+        source: winget
+  # Hardware specific
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Intel.IntelDriverAndSupportAssistant
+      directives:
+        description: Install Intel.IntelDriverAndSupportAssistant
+        allowPrerelease: true
+      settings:
+        id: Intel.IntelDriverAndSupportAssistant
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Logitech.OptionsPlus
+      directives:
+        description: Install Logitech.OptionsPlus
+        allowPrerelease: true
+      settings:
+        id: Logitech.OptionsPlus
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Nvidia.GeForceExperience
+      directives:
+        description: Install Nvidia.GeForceExperience
+        allowPrerelease: true
+      settings:
+        id: Nvidia.GeForceExperience
         source: winget
