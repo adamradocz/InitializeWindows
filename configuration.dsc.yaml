@@ -129,6 +129,14 @@ properties:
         id: VideoLAN.VLC
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: WhatsApp
+      directives:
+        description: Install WhatsApp
+        allowPrerelease: true
+      settings:
+        id: 9NKSQGP7F2NH
+        source: msstore
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: WireGuard.WireGuard
       directives:
         description: Install WireGuard.WireGuard
