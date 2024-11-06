@@ -53,4 +53,4 @@ winget install --exact --id XnSoft.XnViewMP
 # Hardware specific
 winget install --exact --id Intel.IntelDriverAndSupportAssistant
 winget install --exact --id Logitech.OptionsPlus 
-winget install --exact --id Nvidia.GeForceExperience
+#winget install --exact --id Nvidia.GeForceExperience
