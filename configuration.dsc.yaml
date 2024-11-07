@@ -51,24 +51,6 @@ properties:
         id: 9P1J8S7CCWWT
         source: msstore
         ensure: absent
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: FeedbackHub
-      directives:
-        description: Remove Feedback Hub
-        allowPrerelease: true
-      settings:
-        id: 9NBLGGH4R32N
-        source: msstore
-        ensure: absent
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: WindowsCamera
-      directives:
-        description: Remove Windows Camera
-        allowPrerelease: true
-      settings:
-        id: 9WZDNCRFJBBG
-        source: msstore
-        ensure: absent
   ################
   # Install apps #
   ################
@@ -81,54 +63,6 @@ properties:
         id: Ghisler.TotalCommander
         source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: Google.Chrome
-      directives:
-        description: Install Google.Chrome
-        allowPrerelease: true
-      settings:
-        id: Google.Chrome
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: Gyan.FFmpeg
-      directives:
-        description: Install Gyan.FFmpeg
-        allowPrerelease: true
-      settings:
-        id: Gyan.FFmpeg
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: Microsoft.PowerShell
-      directives:
-        description: Install Microsoft.PowerShell
-        allowPrerelease: true
-      settings:
-        id: Microsoft.PowerShell
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: TorProject.TorBrowser
-      directives:
-        description: Install TorProject.TorBrowser
-        allowPrerelease: true
-      settings:
-        id: TorProject.TorBrowser
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: UCBerkeley.BOINC
-      directives:
-        description: Install UCBerkeley.BOINC
-        allowPrerelease: true
-      settings:
-        id: UCBerkeley.BOINC
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: VideoLAN.VLC
-      directives:
-        description: Install VideoLAN.VLC
-        allowPrerelease: true
-      settings:
-        id: VideoLAN.VLC
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: WhatsApp
       directives:
         description: Install WhatsApp
@@ -136,44 +70,3 @@ properties:
       settings:
         id: 9NKSQGP7F2NH
         source: msstore
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: WireGuard.WireGuard
-      directives:
-        description: Install WireGuard.WireGuard
-        allowPrerelease: true
-      settings:
-        id: WireGuard.WireGuard
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: XnSoft.XnViewMP
-      directives:
-        description: Install XnSoft.XnViewMP
-        allowPrerelease: true
-      settings:
-        id: XnSoft.XnViewMP
-        source: winget
-  # Hardware specific
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: Intel.IntelDriverAndSupportAssistant
-      directives:
-        description: Install Intel.IntelDriverAndSupportAssistant
-        allowPrerelease: true
-      settings:
-        id: Intel.IntelDriverAndSupportAssistant
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: Logitech.OptionsPlus
-      directives:
-        description: Install Logitech.OptionsPlus
-        allowPrerelease: true
-      settings:
-        id: Logitech.OptionsPlus
-        source: winget
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: Nvidia.GeForceExperience
-      directives:
-        description: Install Nvidia.GeForceExperience
-        allowPrerelease: true
-      settings:
-        id: Nvidia.GeForceExperience
-        source: winget
