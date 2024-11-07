@@ -15,7 +15,7 @@ winget uninstall --exact --name "Microsoft Sticky Notes"
 winget uninstall --exact --name "Microsoft Tips"
 winget uninstall --exact --name "Microsoft To Do"
 winget uninstall --exact --name "Movies & TV"
-winget uninstall --exact --name "Quick Assist
+winget uninstall --exact --name "Quick Assist"
 winget uninstall --exact --name "Windows Camera"
 winget uninstall --exact --name "Windows Maps"
 winget uninstall --exact --name "Windows Media Player"
