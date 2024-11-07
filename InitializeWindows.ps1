@@ -36,6 +36,7 @@ winget upgrade --all
 winget install --exact --id Ghisler.TotalCommander
 winget install --exact --id Google.Chrome
 winget install --exact --id Gyan.FFmpeg
+winget install --exact --id Microsoft.Office
 winget install --exact --id Microsoft.PowerShell
 winget install --exact --id Microsoft.VisualStudioCode
 #winget install --exact --location $Env:LOCALAPPDATA\Microsoft\WinGet\Packages\TorProject.TorBrowser --id TorProject.TorBrowser
