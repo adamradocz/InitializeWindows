@@ -2,6 +2,7 @@
 
 # Info: https://github.com/SimonCropp/WinDebloat
 winget uninstall --exact --name "Clipchamp"
+winget uninstall --exact --name "Cortana"
 winget uninstall --exact --name "Feedback Hub"
 #winget uninstall --exact --name "Game Bar"
 #winget uninstall --exact --name "Game Speech Window"
@@ -15,7 +16,9 @@ winget uninstall --exact --name "Microsoft Sticky Notes"
 winget uninstall --exact --name "Microsoft Tips"
 winget uninstall --exact --name "Microsoft To Do"
 winget uninstall --exact --name "Movies & TV"
+winget uninstall --exact --name "Phone Link"
 winget uninstall --exact --name "Quick Assist"
+winget uninstall --exact --name "Web Search from Microsoft Bing"
 winget uninstall --exact --name "Windows Camera"
 winget uninstall --exact --name "Windows Maps"
 winget uninstall --exact --name "Windows Media Player"
