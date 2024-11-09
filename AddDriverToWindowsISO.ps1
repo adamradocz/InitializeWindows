@@ -2,25 +2,16 @@
 
 $basePath = "C:\Temp"
 
+# Create directories
 $isoPath = Join-Path -Path $basePath -ChildPath "WinISO"
-If (!(Test-Path $isoPath))
-{
-    New-Item -ItemType Directory -path $isoPath | Out-Null
-}
-
+[System.IO.Directory]::CreateDirectory($isoPath)
 Read-Host -Prompt "Copy the contents of the Windows ISO to $isoPath then press any key to continue..."
 
 $driversPath = Join-Path -Path $basePath -ChildPath "Drivers"
-If (!(Test-Path $driversPath))
-{
-    New-Item -ItemType Directory -path $driversPath | Out-Null
-}
+[System.IO.Directory]::CreateDirectory($driversPath)
 
 $mountedImagePath = Join-Path -Path $basePath -ChildPath "MountedImage"
-If (!(Test-Path $mountedImagePath))
-{
-    New-Item -ItemType Directory -path $mountedImagePath | Out-Null
-}
+[System.IO.Directory]::CreateDirectory($mountedImagePath)
 
 # Back up all device drivers.
 Export-WindowsDriver -Online -Destination $driversPath
