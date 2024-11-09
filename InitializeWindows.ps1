@@ -40,6 +40,7 @@ winget install --exact --id Microsoft.Office
 winget install --exact --id Microsoft.PowerShell
 winget install --exact --id Microsoft.VisualStudioCode
 #winget install --exact --location $Env:LOCALAPPDATA\Microsoft\WinGet\Packages\TorProject.TorBrowser --id TorProject.TorBrowser
+winget install --exact --id Spotify.Spotify
 winget install --exact --id UCBerkeley.BOINC
 winget install --exact --id VideoLAN.VLC
 winget install --exact --id 9NKSQGP7F2NH # WhatsApp
