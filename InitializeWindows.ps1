@@ -4,8 +4,6 @@
 winget uninstall --exact --name "Clipchamp"
 winget uninstall --exact --name "Cortana"
 winget uninstall --exact --name "Feedback Hub"
-#winget uninstall --exact --name "Game Bar"
-#winget uninstall --exact --name "Game Speech Window"
 winget uninstall --exact --name "Get Help"
 winget uninstall --exact --name "MSN Weather"
 winget uninstall --exact --name "Microsoft News"
@@ -22,21 +20,16 @@ winget uninstall --exact --name "Web Search from Microsoft Bing"
 winget uninstall --exact --name "Windows Camera"
 winget uninstall --exact --name "Windows Maps"
 winget uninstall --exact --name "Windows Media Player"
-#winget uninstall --exact --name "Xbox Accessories"
-#winget uninstall --exact --name "Xbox Console Companion"
-#winget uninstall --exact --name "Xbox Game Bar Plugin"
-#winget uninstall --exact --name "Xbox Game Bar"
-#winget uninstall --exact --name "Xbox Game Speech Window"
-#winget uninstall --exact --name "Xbox Identity Provider"
-#winget uninstall --exact --name "Xbox TCUI"
-#winget uninstall --exact --name "Xbox"
 
 winget source update
 winget upgrade --all
 winget install --exact --id Ghisler.TotalCommander
 winget install --exact --id Google.Chrome
 winget install --exact --id Gyan.FFmpeg
+
 winget install --exact --id Microsoft.Office
+winget pin add --id Microsoft.Office --verbose # Office upgrade does not work. Source: https://github.com/microsoft/winget-cli/issues/1728#issuecomment-2467854561
+
 winget install --exact --id Microsoft.PowerShell
 winget install --exact --id Microsoft.VisualStudioCode
 #winget install --exact --location $Env:LOCALAPPDATA\Microsoft\WinGet\Packages\TorProject.TorBrowser --id TorProject.TorBrowser
@@ -50,6 +43,7 @@ winget install --exact --id XnSoft.XnViewMP
 
 # Hardware specific
 winget install --exact --id Intel.IntelDriverAndSupportAssistant
+winget install --exact --id 9WZDNCRFJ4MV # Lenovo Vantage / Lenovo Companion
 winget install --exact --id Logitech.OptionsPlus
 #winget install --exact --id Nvidia.GeForceExperience
 
