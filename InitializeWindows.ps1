@@ -22,7 +22,7 @@ winget uninstall --exact --name "Windows Maps"
 winget uninstall --exact --name "Windows Media Player"
 
 winget source update
-winget upgrade --all
+winget upgrade --all --include-unknown --verbose
 winget install --exact --id Ghisler.TotalCommander
 winget install --exact --id Google.Chrome
 winget install --exact --id Gyan.FFmpeg
