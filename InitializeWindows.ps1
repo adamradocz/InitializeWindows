@@ -47,4 +47,4 @@ winget install --exact --id 9WZDNCRFJ4MV # Lenovo Vantage / Lenovo Companion
 winget install --exact --id Logitech.OptionsPlus
 #winget install --exact --id Nvidia.GeForceExperience
 
-winget configure .\configuration.dsc.yaml
+winget configure .\configuration.winget
