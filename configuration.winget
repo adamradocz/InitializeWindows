@@ -70,7 +70,7 @@ properties:
         description: Install EditorConfig extension for VSCode
         allowPrerelease: true
       settings:
-        Name: EditorConfig.EditorConfig
+        Name: editorconfig.editorconfig
         Exist: true
     - resource: Microsoft.VSCode.Dsc/VSCodeExtension
       id: VSCode.PowerShell
