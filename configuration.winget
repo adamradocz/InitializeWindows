@@ -54,14 +54,55 @@ properties:
   ################
   # Install apps #
   ################
+    # Section: VSCode
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: Ghisler.TotalCommander
+      id: Microsoft.VisualStudioCode
       directives:
-        description: Install Ghisler.TotalCommander
+        description: Install Microsoft.VisualStudioCode
+      settings:
+        id: Microsoft.VisualStudioCode
+        source: winget
+    - resource: Microsoft.VSCode.Dsc/VSCodeExtension
+      id: VSCode.EditorConfig
+      dependsOn:
+        - Microsoft.VisualStudioCode
+      directives:
+        description: Install EditorConfig extension for VSCode
         allowPrerelease: true
       settings:
-        id: Ghisler.TotalCommander
-        source: winget
+        Name: EditorConfig.EditorConfig
+        Exist: true
+    - resource: Microsoft.VSCode.Dsc/VSCodeExtension
+      id: VSCode.PowerShell
+      dependsOn:
+        - Microsoft.VisualStudioCode
+      directives:
+        description: Install PowerShell extension for VSCode
+        allowPrerelease: true
+      settings:
+        Name: ms-vscode.powershell
+        Exist: true
+    - resource: Microsoft.VSCode.Dsc/VSCodeExtension
+      id: VSCode.CSharpDevKit
+      dependsOn:
+        - Microsoft.VisualStudioCode
+      directives:
+        description: Install C# Dev Kit extension for VSCode
+        allowPrerelease: true
+      settings:
+        Name: ms-dotnettools.csdevkit
+        Exist: true
+    - resource: Microsoft.VSCode.Dsc/VSCodeExtension
+      id: VSCode.Dotenv
+      dependsOn:
+        - Microsoft.VisualStudioCode
+      directives:
+        description: Install Dotenv extension for VSCode
+        allowPrerelease: true
+      settings:
+        Name: dotenv.dotenv-vscode
+        Exist: true
+    # Section: WhatsApp
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: WhatsApp
       directives:
