@@ -52,7 +52,7 @@
           "powerline_symbol": "",
           "foreground": "p:white",
           "background": "#F05033",
-          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}",
+          "template": " {{ .UpstreamIcon }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}",
           "properties": {
             "fetch_status": true,
             "fetch_upstream_icon": true,
