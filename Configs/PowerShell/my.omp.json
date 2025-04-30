@@ -50,8 +50,8 @@
           "type": "git",
           "style": "powerline",
           "powerline_symbol": "",
-          "foreground": "#193549",
-          "background": "#ffeb3b",
+          "foreground": "p:white",
+          "background": "#F05033",
           "background_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFEB3B{{ end }}",
             "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}",
