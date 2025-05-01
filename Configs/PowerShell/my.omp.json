@@ -5,7 +5,10 @@
   "final_space": true,
   "palette": {
     "black": "#000000",
-    "white": "#FFFFFF"
+    "white": "#FFFFFF",
+    "blue": "#0037DA",
+    "bright_blue": "#3A96DD",
+    "grey": "#CCCCCC"
   },
   "blocks": [
     {
@@ -15,25 +18,30 @@
         {
           "type": "os",
           "style": "plain",
-          "foreground": "#3A86FF",
-          "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}} |"
+          "foreground": "p:blue",
+          "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}} | "
         },
         {
           "type": "session",
-          "style": "diamond",
-          "trailing_diamond": "",
-          "template": "{{ if .SSHSession }} {{ .UserName }}@{{ .HostName }}{{ end }}"
+          "style": "plain",
+          "foreground": "#ff479c",
+          "template": "{{ if .SSHSession }} {{ .UserName }}@{{ .HostName }}<p:white>:</>{{ end }}"
         },
         {
           "type": "path",
-          "template": " {{ .Path }}",
           "style": "diamond",
-          "trailing_diamond": ">",
+          "leading_diamond": "<transparent,background></>",
+          "trailing_diamond": "",
+          "background": "p:blue",
+          "foreground": "p:white",
+          "template": "{{ .Path }}",
           "properties": {
             "style": "agnoster_short",
             "max_depth": 5,
             "mapped_locations": {
-              "C:\\temp": ""
+              "~\\Downloads": "~\\󰇚",
+              "~\\OneDrive": "~\\󰏊",
+              "~\\sources": "\\~"
             },
             "display_root": true
           }
@@ -50,17 +58,18 @@
           "type": "git",
           "style": "powerline",
           "powerline_symbol": "",
-          "foreground": "p:white",
+          "foreground": "p:black",
           "background": "#F05033",
           "background_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFEB3B{{ end }}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}",
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}#FF9248{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FF4500{{ end }}",
             "{{ if gt .Ahead 0 }}#B388FF{{ end }}",
             "{{ if gt .Behind 0 }}#B388FB{{ end }}"
           ],
-          "template": " {{ .UpstreamIcon }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}",
+          "template": " {{ .UpstreamIcon }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
           "properties": {
             "fetch_status": true,
+            "fetch_stash_count": true,
             "fetch_upstream_icon": true,
             "source": "cli",
             "mapped_branches": {
@@ -74,11 +83,12 @@
         },
         {
           "type": "executiontime",
-          "style": "powerline",
-          "powerline_symbol": "",
+          "style": "diamond",
+          "leading_diamond": "<transparent,background></>",
+          "trailing_diamond": "",
           "foreground": "p:white",
-          "background": "#0087D8",
-          "template": "  {{ .FormattedMs }} ",
+          "background": "p:bright_blue",
+          "template": "{{ .FormattedMs }}",
           "properties": {
             "threshold": 500,
             "style": "austin",
@@ -87,8 +97,9 @@
         },
         {
           "type": "root",
-          "style": "powerline",
-          "powerline_symbol": "",
+          "style": "diamond",
+          "leading_diamond": "",
+          "trailing_diamond": "",
           "foreground": "p:black",
           "background": "#ffff66",
           "template": ""
@@ -115,7 +126,7 @@
           "properties": {
             "discharging_icon": "󱟥 ",
             "charging_icon": "󰂄 ",
-            "charged_icon": " "
+            "charged_icon": "󱈑 "
           }
         },
         {
