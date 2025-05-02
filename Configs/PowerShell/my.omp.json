@@ -133,7 +133,7 @@
           "type": "time",
           "style": "plain",
           "properties": {
-            "time_format": "15:04:05"
+            "time_format": "[15:04]"
           }
         }
       ]
