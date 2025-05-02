@@ -18,8 +18,21 @@
         {
           "type": "os",
           "style": "plain",
-          "foreground": "p:blue",
-          "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}} | "
+          "foreground_templates": [
+            "{{if contains \"windows\" .OS}}p:blue{{end}}",
+            "{{if contains \"ubuntu\" .OS}}#DD4814{{end}}"
+          ],
+          "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}}"
+        },
+        {
+          "type": "shell",
+          "style": "plain",
+          "template": " {{ .Name }} | ",
+          "properties": {
+            "mapped_shell_names": {
+              "pwsh": "PS"
+            }
+          }
         },
         {
           "type": "session",
@@ -94,15 +107,6 @@
             "style": "austin",
             "always_enabled": true
           }
-        },
-        {
-          "type": "root",
-          "style": "diamond",
-          "leading_diamond": "",
-          "trailing_diamond": "",
-          "foreground": "p:black",
-          "background": "#ffff66",
-          "template": ""
         }
       ]
     },
@@ -145,15 +149,16 @@
       "newline": true,
       "segments": [
         {
-          "type": "shell",
+          "type": "root",
           "style": "plain",
-          "template": "{{ .Name }}>",
-          "properties": {
-            "mapped_shell_names": {
-              "pwsh": "PS"
-            }
-          }
-        }
+          "foreground": "#ffff66",
+          "template": ""
+        },
+        {
+          "style": "plain",
+          "template": ">",
+          "type": "text"
+        }        
       ]
     }
   ]
