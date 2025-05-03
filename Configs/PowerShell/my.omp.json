@@ -20,20 +20,14 @@
       "segments": [
         {
           "type": "session",
-          "style": "diamond",
-          "leading_diamond": "",
-          "trailing_diamond": "",
-          "background": "p:turquoise",
-          "foreground": "p:black",
-          "template": "{{ if .SSHSession }} {{ .UserName }}@{{ .HostName }} {{ end }}"
+          "style": "plain",
+          "template": "{{ if .SSHSession }} {{ .UserName }}@{{ .HostName }}:{{ end }}"
         },
         {
           "type": "os",
           "style": "diamond",
           "leading_diamond": "",
           "trailing_diamond": "",
-          "background": "p:gold",
-          "foreground": "p:black",
           "foreground_templates": [
             "{{if contains \"windows\" .OS}}#004FE1{{end}}",
             "{{if contains \"ubuntu\" .OS}}#E95420{{end}}",
@@ -46,15 +40,13 @@
             "{{if contains \"raspbian\" .OS}}#C51A4A{{end}}",
             "{{if contains \"redhat\" .OS}}#EE0000{{end}}"
           ],
-          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}"
+          "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}}"
         },
         {
           "type": "shell",
           "style": "diamond",
           "leading_diamond": "",
-          "trailing_diamond": "",
-          "background": "p:gold",
-          "foreground": "p:black",
+          "trailing_diamond": "",
           "template": " {{ .Name }}",
           "properties": {
             "mapped_shell_names": {
@@ -172,7 +164,7 @@
         {
           "type": "root",
           "style": "plain",
-          "foreground": "#ffff66",
+          "foreground": "#FFFF66",
           "template": ""
         },
         {
