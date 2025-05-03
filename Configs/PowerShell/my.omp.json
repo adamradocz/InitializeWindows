@@ -6,9 +6,12 @@
   "palette": {
     "black": "#000000",
     "white": "#FFFFFF",
-    "blue": "#0037DA",
-    "bright_blue": "#3A96DD",
-    "grey": "#CCCCCC"
+    "grey": "#CCCCCC",
+    "dark_blue": "#0037DA",
+    "blue": "#009FE3",
+    "magenta": "#E50051",
+    "purple": "#340C46",
+    "gold": "#FCBF00"
   },
   "blocks": [
     {
@@ -19,7 +22,7 @@
           "type": "os",
           "style": "plain",
           "foreground_templates": [
-            "{{if contains \"windows\" .OS}}p:blue{{end}}",
+            "{{if contains \"windows\" .OS}}p:dark_blue{{end}}",
             "{{if contains \"ubuntu\" .OS}}#DD4814{{end}}"
           ],
           "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}}"
@@ -37,15 +40,15 @@
         {
           "type": "session",
           "style": "plain",
-          "foreground": "#ff479c",
-          "template": "{{ if .SSHSession }} {{ .UserName }}@{{ .HostName }}<p:white>:</>{{ end }}"
+          "foreground": "p:magenta",
+          "template": "{{ if .SSHSession }} {{ .UserName }}@{{ .HostName }}:{{ end }}"
         },
         {
           "type": "path",
           "style": "diamond",
           "leading_diamond": "<transparent,background></>",
           "trailing_diamond": "",
-          "background": "p:blue",
+          "background": "p:dark_blue",
           "foreground": "p:white",
           "template": "{{ .Path }}",
           "properties": {
@@ -100,7 +103,7 @@
           "leading_diamond": "<transparent,background></>",
           "trailing_diamond": "",
           "foreground": "p:white",
-          "background": "p:bright_blue",
+          "background": "p:blue",
           "template": "{{ .FormattedMs }}",
           "properties": {
             "threshold": 500,
