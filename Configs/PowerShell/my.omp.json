@@ -48,7 +48,7 @@
           "style": "diamond",
           "leading_diamond": "<transparent,background></>",
           "trailing_diamond": "",
-          "background": "p:dark_blue",
+          "background": "p:magenta",
           "foreground": "p:white",
           "template": "{{ .Path }}",
           "properties": {
@@ -57,7 +57,7 @@
             "mapped_locations": {
               "~\\Downloads": "~\\󰇚",
               "~\\OneDrive": "~\\󰏊",
-              "~\\sources": "\\~"
+              "~\\sources": "~\\"
             },
             "display_root": true
           }
