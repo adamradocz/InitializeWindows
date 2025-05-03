@@ -7,10 +7,11 @@
     "black": "#000000",
     "white": "#FFFFFF",
     "grey": "#CCCCCC",
+    "gold": "#FCBF00",
     "blue": "#009FE3",
     "magenta": "#E50051",
     "purple": "#340C46",
-    "gold": "#FCBF00"
+    "turquoise": "#00C0C0"
   },
   "blocks": [
     {
@@ -18,11 +19,20 @@
       "alignment": "left",
       "segments": [
         {
+          "type": "session",
+          "style": "diamond",
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "background": "p:turquoise",
+          "foreground": "p:black",
+          "template": "{{ if .SSHSession }} {{ .UserName }}@{{ .HostName }} {{ end }}"
+        },
+        {
           "type": "os",
           "style": "diamond",
           "leading_diamond": "",
           "trailing_diamond": "",
-          "background": "p:white",
+          "background": "p:gold",
           "foreground": "p:black",
           "foreground_templates": [
             "{{if contains \"windows\" .OS}}#004FE1{{end}}",
@@ -43,7 +53,7 @@
           "style": "diamond",
           "leading_diamond": "",
           "trailing_diamond": "",
-          "background": "p:white",
+          "background": "p:gold",
           "foreground": "p:black",
           "template": " {{ .Name }}",
           "properties": {
@@ -51,15 +61,6 @@
               "pwsh": "PS"
             }
           }
-        },
-        {
-          "type": "session",
-          "style": "diamond",
-          "leading_diamond": "",
-          "trailing_diamond": "",
-          "background": "p:white",
-          "foreground": "p:black",
-          "template": "{{ if .SSHSession }} {{ .UserName }}@{{ .HostName }}:{{ end }}"
         },
         {
           "type": "path",
@@ -86,7 +87,7 @@
           "powerline_symbol": "",
           "foreground": "p:white",
           "background": "#512BD4",
-          "template": "  {{ .Full }}{{ .Prerelease }} "
+          "template": "  {{ .Full }}{{ .Prerelease }}"
         },
         {
           "type": "git",
@@ -141,7 +142,6 @@
           "powerline_symbol": "",
           "invert_powerline": true,
           "foreground": "p:white",
-          "background": "#ffeb3b",
           "background_templates": [
             "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
             "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
