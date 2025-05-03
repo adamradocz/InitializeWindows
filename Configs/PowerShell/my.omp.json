@@ -7,7 +7,6 @@
     "black": "#000000",
     "white": "#FFFFFF",
     "grey": "#CCCCCC",
-    "dark_blue": "#0037DA",
     "blue": "#009FE3",
     "magenta": "#E50051",
     "purple": "#340C46",
@@ -20,17 +19,33 @@
       "segments": [
         {
           "type": "os",
-          "style": "plain",
+          "style": "diamond",
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "background": "p:white",
+          "foreground": "p:black",
           "foreground_templates": [
-            "{{if contains \"windows\" .OS}}p:dark_blue{{end}}",
-            "{{if contains \"ubuntu\" .OS}}#DD4814{{end}}"
+            "{{if contains \"windows\" .OS}}#004FE1{{end}}",
+            "{{if contains \"ubuntu\" .OS}}#E95420{{end}}",
+            "{{if contains \"mac\" .OS}}#555555{{end}}",
+            "{{if contains \"linux\" .OS}}FFCC33{{end}}",
+            "{{if contains \"alpine\" .OS}}#005880{{end}}",
+            "{{if contains \"android\" .OS}}#78C257{{end}}",
+            "{{if contains \"debian\" .OS}}#D70A53{{end}}",
+            "{{if contains \"opensuse\" .OS}}#73BA25{{end}}",
+            "{{if contains \"raspbian\" .OS}}#C51A4A{{end}}",
+            "{{if contains \"redhat\" .OS}}#EE0000{{end}}"
           ],
-          "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}}"
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}"
         },
         {
           "type": "shell",
-          "style": "plain",
-          "template": " {{ .Name }} | ",
+          "style": "diamond",
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "background": "p:white",
+          "foreground": "p:black",
+          "template": " {{ .Name }}",
           "properties": {
             "mapped_shell_names": {
               "pwsh": "PS"
@@ -39,8 +54,11 @@
         },
         {
           "type": "session",
-          "style": "plain",
-          "foreground": "p:magenta",
+          "style": "diamond",
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "background": "p:white",
+          "foreground": "p:black",
           "template": "{{ if .SSHSession }} {{ .UserName }}@{{ .HostName }}:{{ end }}"
         },
         {
