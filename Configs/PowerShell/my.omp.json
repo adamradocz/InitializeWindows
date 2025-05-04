@@ -6,12 +6,10 @@
   "palette": {
     "black": "#000000",
     "white": "#FFFFFF",
-    "grey": "#CCCCCC",
     "gold": "#FCBF00",
     "blue": "#009FE3",
     "magenta": "#E50051",
-    "purple": "#340C46",
-    "turquoise": "#00C0C0"
+    "purple": "#340C46"
   },
   "blocks": [
     {
@@ -168,9 +166,12 @@
           "template": ""
         },
         {
+          "type": "text",
           "style": "plain",
-          "template": ">",
-          "type": "text"
+          "template": "󰅂",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}red{{ end }}"
+          ]          
         }        
       ]
     }

@@ -26,12 +26,13 @@ winget upgrade --all --include-unknown --verbose
 winget install --exact --id Ghisler.TotalCommander
 winget install --exact --id Google.Chrome
 winget install --exact --id Gyan.FFmpeg
-winget install --exact --id JanDeDobbeleer.OhMyPosh
 
 winget install --exact --id Microsoft.Office
 winget pin add --id Microsoft.Office --verbose # Office upgrade does not work. Source: https://github.com/microsoft/winget-cli/issues/1728#issuecomment-2467854561
 
+# PowerShell and everything related to it
 winget install --exact --id Microsoft.PowerShell
+winget install --exact --id JanDeDobbeleer.OhMyPosh
 Install-Module -Name Terminal-Icons -Repository PSGallery
 Install-Module -Name PSReadLine -Repository PSGallery
 
