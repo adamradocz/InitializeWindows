@@ -34,7 +34,6 @@ winget pin add --id Microsoft.Office --verbose # Office upgrade does not work. S
 winget install --exact --id Microsoft.PowerShell
 winget install --exact --id JanDeDobbeleer.OhMyPosh
 Install-Module -Name Terminal-Icons -Repository PSGallery
-Install-Module -Name PSReadLine -Repository PSGallery
 
 winget install --exact --id Microsoft.VisualStudioCode
 #winget install --exact --location $Env:LOCALAPPDATA\Microsoft\WinGet\Packages\TorProject.TorBrowser --id TorProject.TorBrowser
