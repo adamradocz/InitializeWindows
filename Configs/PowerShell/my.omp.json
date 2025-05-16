@@ -45,7 +45,7 @@
           "style": "diamond",
           "leading_diamond": "",
           "trailing_diamond": "",
-          "template": " {{ .Name }}",
+          "template": " {{ .Name }} ",
           "properties": {
             "mapped_shell_names": {
               "pwsh": "PS"
@@ -55,7 +55,7 @@
         {
           "type": "path",
           "style": "diamond",
-          "leading_diamond": "<transparent,background></>",
+          "leading_diamond": "<background,transparent></>",
           "trailing_diamond": "",
           "background": "p:magenta",
           "foreground": "p:white",
