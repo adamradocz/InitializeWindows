@@ -119,6 +119,21 @@
             "style": "austin",
             "always_enabled": false
           }
+        },
+        {
+          "type": "status",
+          "style": "diamond",
+          "leading_diamond": "<transparent,background></>",
+          "trailing_diamond": "",
+          "foreground": "p:black",
+          "background": "#00897B",
+          "background_templates": [
+            "{{ if .Error }}#E91E63{{ end }}"
+          ],
+          "template": " {{ if eq .Code 0 }}󰸞{{ else }} {{ reason .Code }}{{ end }}",
+          "properties": {
+            "always_enabled": false
+          }
         }
       ]
     },
@@ -167,10 +182,7 @@
         {
           "type": "text",
           "style": "plain",
-          "template": "󰅂",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}red{{ end }}"
-          ]          
+          "template": "󰅂"       
         }        
       ]
     }
