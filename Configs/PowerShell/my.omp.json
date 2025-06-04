@@ -98,11 +98,8 @@
             "fetch_upstream_icon": true,
             "source": "cli",
             "mapped_branches": {
-              "feat/*": "🚀 ",
               "feature/*": "🚀 ",
-              "bug/*": "🐛 ",
-              "bugfix/*": "🐛 ",
-              "hotfix/*": "🐛 "
+              "bug/*": "🐛 "
             }
           }
         },
