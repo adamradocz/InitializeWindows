@@ -25,7 +25,7 @@ winget source update
 winget upgrade --all --include-unknown --verbose
 winget install --exact --id Ghisler.TotalCommander
 winget install --exact --id Google.Chrome
-winget install --exact --id Gyan.FFmpeg
+winget install --exact --id BtbN.FFmpeg.GPL
 
 winget install --exact --id Microsoft.Office
 winget pin add --id Microsoft.Office --verbose # Office upgrade does not work. Source: https://github.com/microsoft/winget-cli/issues/1728#issuecomment-2467854561
@@ -44,11 +44,11 @@ winget install --exact --id VideoLAN.VLC
 winget install --exact --id 9NKSQGP7F2NH # WhatsApp
 winget install --exact --id WireGuard.WireGuard
 winget install --exact --id XnSoft.XnViewMP
+winget install --exact --id yt-dlp.yt-dlp
 
 # Hardware specific
 winget install --exact --id Intel.IntelDriverAndSupportAssistant
 winget install --exact --id 9WZDNCRFJ4MV # Lenovo Vantage / Lenovo Companion
 winget install --exact --id Logitech.OptionsPlus
-#winget install --exact --id Nvidia.GeForceExperience
 
 winget configure .\configuration.winget
