@@ -25,7 +25,8 @@ winget source update
 winget upgrade --all --include-unknown --verbose
 winget install --exact --id Ghisler.TotalCommander
 winget install --exact --id Google.Chrome
-winget install --exact --id BtbN.FFmpeg.GPL
+#winget install --exact --id BtbN.FFmpeg.GPL # yt-dlp comes with FFmpeg.
+winget install --exact --id Jellyfin.JellyfinMediaPlayer
 
 winget install --exact --id Microsoft.Office
 winget pin add --id Microsoft.Office --verbose # Office upgrade does not work. Source: https://github.com/microsoft/winget-cli/issues/1728#issuecomment-2467854561
