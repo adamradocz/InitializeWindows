@@ -28,8 +28,9 @@ winget install --exact --id Google.Chrome
 #winget install --exact --id BtbN.FFmpeg.GPL # yt-dlp comes with FFmpeg.
 winget install --exact --id Jellyfin.JellyfinMediaPlayer
 
-winget install --exact --id Microsoft.Office
-winget pin add --id Microsoft.Office --verbose # Office upgrade does not work. Source: https://github.com/microsoft/winget-cli/issues/1728#issuecomment-2467854561
+# Microsoft Office
+#winget install --exact --id Microsoft.Office
+#winget pin add --id Microsoft.Office --verbose # Office upgrade does not work. Source: https://github.com/microsoft/winget-cli/issues/1728#issuecomment-2467854561
 
 # PowerShell and everything related to it
 winget install --exact --id Microsoft.PowerShell
@@ -37,12 +38,12 @@ winget install --exact --id JanDeDobbeleer.OhMyPosh
 Install-Module -Name Terminal-Icons -Repository PSGallery
 
 winget install --exact --id Microsoft.VisualStudioCode
+winget install --exact --id OpenWhisperSystems.Signal
 #winget install --exact --location $Env:LOCALAPPDATA\Microsoft\WinGet\Packages\TorProject.TorBrowser --id TorProject.TorBrowser
 winget install --exact --id Spotify.Spotify
 winget install --exact --id TIDALMusicAS.TIDAL
 winget install --exact --id UCBerkeley.BOINC
 winget install --exact --id VideoLAN.VLC
-winget install --exact --id 9NKSQGP7F2NH # WhatsApp
 winget install --exact --id WireGuard.WireGuard
 winget install --exact --id XnSoft.XnViewMP
 winget install --exact --id yt-dlp.yt-dlp
